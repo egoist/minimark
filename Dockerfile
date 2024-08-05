@@ -23,6 +23,8 @@ FROM base AS build
 # Install packages needed to build node modules
 RUN apt-get install --no-install-recommends -y build-essential node-gyp pkg-config python-is-python3
 
+ENV SKIP_WXT_PREPARE=1
+
 # Install node modules
 COPY --link . .
 RUN pnpm install --frozen-lockfile
