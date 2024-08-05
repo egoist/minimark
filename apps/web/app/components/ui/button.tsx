@@ -3,6 +3,7 @@ import { Slot } from "@radix-ui/react-slot"
 import { tv, type VariantProps } from "tailwind-variants"
 
 import { cn } from "~/lib/utils"
+import { Spinner } from "./spinner"
 
 const buttonVariants = tv({
   base: "inline-flex items-center justify-center gap-1.5 whitespace-nowrap rounded-lg text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 ring-inset focus-visible:ring-ring aria-disabled:pointer-events-none aria-disabled:opacity-50 aria-expanded:bg-muted",
@@ -64,11 +65,7 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
         disabled={isDisabled}
         aria-disabled={isDisabled}
       >
-        {isLoading ? (
-          <span className="i-mingcute-loading-3-fill animate-spin"></span>
-        ) : (
-          startContent
-        )}
+        {isLoading ? <Spinner /> : startContent}
         {size === "icon" && isLoading ? null : children}
       </Comp>
     )

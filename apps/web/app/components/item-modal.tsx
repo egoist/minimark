@@ -19,6 +19,7 @@ import { Control } from "./ui/control"
 import { Input } from "./ui/input"
 import { Textarea } from "./ui/textarea"
 import { useForm } from "react-hook-form"
+import { Spinner } from "./ui/spinner"
 
 export default function ItemModal() {
   const params = useParams()
@@ -48,7 +49,11 @@ export default function ItemModal() {
       }}
     >
       <DialogContent fullPage className="flex flex-col">
-        {item ? (
+        {itemsQuery.isLoading ? (
+          <div className="grid h-full w-full place-items-center text-xl">
+            <Spinner />
+          </div>
+        ) : item ? (
           item.type === "note" ? (
             <NoteItem item={item} />
           ) : (
