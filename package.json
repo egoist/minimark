@@ -1,0 +1,16 @@
+{
+  "private": true,
+  "name": "workspace",
+  "scripts": {
+    "dev": "pnpm --filter web... --parallel dev",
+    "build": "pnpm --filter web... build"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.10",
+    "prettier": "^3.3.3",
+    "prettier-plugin-tailwindcss": "^0.6.5",
+    "tsup": "^8.2.4",
+    "typescript": "^5.5.4"
+  },
+  "packageManager": "pnpm@9.5.0+sha256.dbdf5961c32909fb030595a9daa1dae720162e658609a8f92f2fa99835510ca5"
+}

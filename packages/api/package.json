@@ -1,0 +1,46 @@
+{
+  "private": true,
+  "name": "@workspace/api",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./src/index.ts",
+      "default": "./dist/index.js"
+    },
+    "./db": {
+      "types": "./src/db/index.ts",
+      "default": "./dist/db.js"
+    }
+  },
+  "scripts": {
+    "dev": "rm -rf dist && tsup --watch",
+    "build": "rm -rf dist && tsup",
+    "db-push": "drizzle-kit push",
+    "migrate-gen": "drizzle-kit generate",
+    "migrate-deploy": "drizzle-kit migrate"
+  },
+  "dependencies": {
+    "@aws-sdk/client-ses": "^3.623.0",
+    "@extractus/article-extractor": "^8.0.8",
+    "@trpc/server": "11.0.0-rc.458",
+    "better-sqlite3": "^11.1.2",
+    "cheerio": "1.0.0-rc.12",
+    "cookie": "^0.6.0",
+    "dayjs": "^1.11.10",
+    "drizzle-kit": "^0.23.1",
+    "drizzle-orm": "^0.32.1",
+    "nanoid": "^5.0.7",
+    "pg": "^8.12.0",
+    "superjson": "^2.2.1",
+    "turndown": "^7.2.0",
+    "turndown-plugin-gfm": "^1.0.2",
+    "ulidx": "^2.3.0",
+    "zod": "^3.23.4"
+  },
+  "devDependencies": {
+    "@types/better-sqlite3": "^7.6.11",
+    "@types/cookie": "^0.6.0",
+    "@types/pg": "^8.11.6",
+    "@types/turndown": "^5.0.5"
+  }
+}

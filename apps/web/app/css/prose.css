@@ -1,0 +1,83 @@
+.prose {
+}
+
+.prose > *:first-child {
+  @apply mt-0;
+}
+
+.prose > *:last-child {
+  @apply mb-0;
+}
+
+.prose p {
+  @apply my-3;
+}
+
+.prose pre p {
+  @apply my-0;
+}
+
+.prose pre {
+  @apply my-5 bg-zinc-200 p-5 rounded-lg overflow-auto whitespace-pre-wrap text-sm text-purple-500;
+}
+
+.prose h2 {
+  @apply text-3xl font-bold mt-10 mb-5 border-b pb-2;
+}
+
+.prose h3 {
+  @apply text-2xl font-bold mt-8 mb-5;
+}
+
+.prose h4 {
+  @apply text-xl font-bold mt-6 mb-5;
+}
+
+.prose h5 {
+  @apply text-lg font-bold mt-6  mb-5;
+}
+
+.prose a {
+  @apply text-primary underline;
+}
+
+.prose :not(pre) code {
+  @apply bg-zinc-200 px-1 rounded text-sm;
+}
+
+.prose ul {
+  @apply list-disc pl-5 my-5;
+}
+
+.prose ol {
+  @apply list-decimal pl-5 my-5;
+}
+
+.prose blockquote {
+  @apply border-l-4 border-zinc-500 p-4 my-5;
+}
+
+.prose blockquote > *:first-child {
+  @apply mt-0;
+}
+
+.prose blockquote > *:last-child {
+  @apply mb-0;
+}
+
+.prose table {
+  @apply w-full my-5 rounded-lg border;
+}
+
+.prose thead {
+  @apply bg-zinc-100;
+}
+
+.prose th,
+.prose td {
+  @apply px-2 py-1;
+}
+
+.prose tbody tr {
+  @apply even:bg-zinc-100;
+}

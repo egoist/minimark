@@ -1,0 +1,10 @@
+node_modules
+
+.cache
+build
+.env
+dist/
+.wrangler
+*.db
+*.db-*
+.DS_Store
