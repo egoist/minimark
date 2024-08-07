@@ -40,7 +40,10 @@ const createTrpcClient = () => {
       }),
 
       splitLink({
-        condition: (op) => op.type === "query" && import.meta.env.PROD,
+        condition: () => {
+          // return op.type === "query" && import.meta.env.PROD
+          return false
+        },
         true: unstable_httpBatchStreamLink({
           transformer: SuperJSON,
           url: "/api/trpc",
